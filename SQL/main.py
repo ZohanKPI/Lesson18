@@ -20,9 +20,11 @@ mycursor.execute("DROP TABLE student")
 
 mycursor.execute("DROP TABLE employee")
 
-mycursor.execute("CREATE TABLE student (id2 INT PRIMARY KEY, name VARCHAR(255))")
+mycursor.execute("CREATE TABLE student (id INT PRIMARY KEY, name VARCHAR(255))")
 
 mycursor.execute("CREATE TABLE employee (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), salary INT(6))")
+
+#mycursor.execute("ALTER TABLE student CHANGE id id2 INT PRIMARY KEY")
 
 mycursor.execute("INSERT INTO student (id2, name) VALUES (%s, %s)", (1, "John"))
 
